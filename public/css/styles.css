@@ -528,7 +528,7 @@ footer .copyright-text {
     padding-top: 50px;
   }
 
-  section.best-sellers h1 {
+  section.best-sellers h2 {
     font-size: 28px;
     letter-spacing: 0.7px;
     line-height: 38px;
@@ -604,7 +604,7 @@ footer .copyright-text {
     margin: 50px auto;
   }
 
-  section.newsletter h3 {
+  section.newsletter p {
     font-size: 22px;
     letter-spacing: 0.55px;
     line-height: 42px;
@@ -677,7 +677,7 @@ footer .copyright-text {
     max-width: 360px;
   }
 
-  section.best-sellers h1 {
+  section.best-sellers h2 {
     font-size: 36px;
     letter-spacing: 0.6px;
     line-height: 38px;
