@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home - Tech Shop</title>
 
-    <link rel="stylesheet" href="./css/styles.css" />
     <!-- SEO Meta Description -->
     <meta
       name="description"
@@ -21,17 +20,53 @@
     <!-- Optional: Author -->
     <meta name="author" content="Tech Shop" />
     <!-- Google Tag Manager -->
+
+    <!-- Async CSS -->
+    <link
+      rel="preload"
+      href="./css/styles.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="./css/styles.css" /></noscript>
+
+    <!-- Preload Fonts -->
+    <link
+      rel="preload"
+      href="fonts/Heebo-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="fonts/Heebo-Medium.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
+    <!-- Font CSS already has font-display: swap -->
+
     <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-PKK35GL5");
+      // (function (w, d, s, l, i) {
+      //   w[l] = w[l] || [];
+      //   w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+      //   var f = d.getElementsByTagName(s)[0],
+      //     j = d.createElement(s),
+      //     dl = l != "dataLayer" ? "&l=" + l : "";
+      //   j.async = true;
+      //   j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      //   f.parentNode.insertBefore(j, f);
+      // })(window, document, "script", "dataLayer", "GTM-PKK35GL5");
+
+      window.addEventListener("load", () => {
+        var gtmScript = document.createElement("script");
+        gtmScript.src =
+          "https://www.googletagmanager.com/gtm.js?id=GTM-PKK35GL5";
+        gtmScript.async = true;
+        document.head.appendChild(gtmScript);
+      });
     </script>
     <!-- End Google Tag Manager -->
 
@@ -59,20 +94,6 @@
     </script>
 
     <!--  -->
-    <link
-    rel="preload"
-    href="fonts/Heebo-Regular.ttf"
-    as="font"
-    type="font/ttf"
-    crossorigin="anonymous"
-  />
-  <link
-    rel="preload"
-    href="fonts/Heebo-Medium.ttf"
-    as="font"
-    type="font/ttf"
-    crossorigin="anonymous"
-  />
   </head>
 
   <body>
@@ -118,7 +139,6 @@
           width="576"
           height="576"
           fetchpriority="high"
-
         />
 
         <!-- Tablet -->
@@ -137,7 +157,6 @@
           srcset="images/Hero_Desktop.webp"
           type="image/webp"
           fetchpriority="high"
-
         />
 
         <img
@@ -146,7 +165,6 @@
           src="images/Hero_Desktop.jpg"
           alt="Hero Banner"
           fetchpriority="high"
-
         />
       </picture>
 
