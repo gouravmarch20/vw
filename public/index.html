@@ -6,71 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home - Tech Shop</title>
 
-    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
-    <link
-      rel="preload"
-      href="./css/styles.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-
-    <!-- Inline CSS -->
-    <style>
-      /* Font-face definitions */
-      @font-face {
-        font-family: "Heebo";
-        src: url("fonts/Heebo-Regular.ttf") format("truetype");
-        font-display: swap;
-        font-weight: 400;
-        font-style: normal;
-      }
-
-      @font-face {
-        font-family: "Heebo";
-        src: url("fonts/Heebo-Regular.ttf") format("truetype");
-        font-display: swap;
-        font-weight: 300;
-        font-style: normal;
-      }
-
-      @font-face {
-        font-family: "Heebo";
-        src: url("fonts/Heebo-Medium.ttf") format("truetype");
-        font-display: swap;
-        font-weight: 600;
-        font-style: normal;
-      }
-
-      @font-face {
-        font-family: "Heebo";
-        src: url("fonts/Heebo-Medium.ttf") format("truetype");
-        font-display: swap;
-        font-weight: 700;
-        font-style: normal;
-      }
-
-      /* Example CSS */
-      body {
-        margin: 0;
-        font-family: "Heebo", sans-serif;
-        padding-top: 80px;
-      }
-
-      header {
-        background-color: #fff;
-        box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.15);
-        height: 80px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1;
-      }
-
-      /* Add the rest of your CSS here… */
-    </style>
-    <!-- 	•	Changes the <link> element’s rel from "preload" to "stylesheet". -->
-    <noscript><link rel="stylesheet" href="./css/styles.css" /></noscript>
+    <link rel="stylesheet" href="./css/styles.css" />
     <!-- SEO Meta Description -->
     <meta
       name="description"
@@ -121,6 +57,22 @@
         });
       });
     </script>
+
+    <!--  -->
+    <link
+    rel="preload"
+    href="fonts/Heebo-Regular.ttf"
+    as="font"
+    type="font/ttf"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="fonts/Heebo-Medium.ttf"
+    as="font"
+    type="font/ttf"
+    crossorigin="anonymous"
+  />
   </head>
 
   <body>
@@ -165,6 +117,8 @@
           media="(max-width: 576px)"
           width="576"
           height="576"
+          fetchpriority="high"
+
         />
 
         <!-- Tablet -->
@@ -182,6 +136,8 @@
           height="893"
           srcset="images/Hero_Desktop.webp"
           type="image/webp"
+          fetchpriority="high"
+
         />
 
         <img
@@ -189,6 +145,8 @@
           height="893"
           src="images/Hero_Desktop.jpg"
           alt="Hero Banner"
+          fetchpriority="high"
+
         />
       </picture>
 
@@ -334,7 +292,7 @@
 
     <a href="#" id="open_preferences_center">Update cookies preferences</a>
 
-    <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/products.js"></script>
+    <script defer src="js/main.js"></script>
+    <script defer src="js/products.js"></script>
   </body>
 </html>
